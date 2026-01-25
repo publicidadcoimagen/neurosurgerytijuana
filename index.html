@@ -7,14 +7,17 @@
   <title>Neurosurgeon in Tijuana | Dr. José Manuel Segovia</title>
   <meta name="description" content="Neurosurgeon in Tijuana. Dr. José Manuel Segovia provides clear, compassionate care for spine and brain conditions. Schedule a consultation." />
   <meta name="robots" content="index,follow" />
+
   <link rel="canonical" href="https://neurosurgerytijuana.com/" />
 
+  <!-- Icons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Neurosurgeon in Tijuana | Dr. José Manuel Segovia" />
@@ -22,60 +25,139 @@
   <meta property="og:url" content="https://neurosurgerytijuana.com/" />
   <meta property="og:image" content="https://neurosurgerytijuana.com/og-image.jpg" />
 
+  <!-- Hreflang -->
   <link rel="alternate" hreflang="en-US" href="https://neurosurgerytijuana.com/" />
   <link rel="alternate" hreflang="es-MX" href="https://neurocirujanosentijuana.com/" />
   <link rel="alternate" hreflang="x-default" href="https://neurosurgerytijuana.com/" />
 
   <style>
     :root{
-      --bg:#00002E; --text:#FFFFFF; --muted:rgba(255,255,255,.78);
-      --brand:#F2B42D; --brand2:#48A8E2; --card:rgba(0,0,46,.92);
-      --border:rgba(255,255,255,.12); --radius:16px; --shadow:0 12px 32px rgba(0,0,0,.35);
+      --bg:#00002E;
+      --text:#FFFFFF;
+      --muted:rgba(255,255,255,.78);
+      --brand:#F2B42D;
+      --brand2:#48A8E2;
+      --card:rgba(0,0,46,.92);
+      --border:rgba(255,255,255,.12);
+      --radius:16px;
+      --shadow: 0 12px 32px rgba(0,0,0,.35);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.55;
+    }
     a{color:var(--brand2)}
     .container{max-width:1100px;margin:0 auto;padding:0 20px}
     .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip:focus{left:20px;top:20px;width:auto;height:auto;background:#fff;color:#000;padding:10px;border:1px solid #ddd;border-radius:10px;z-index:999}
-    header{position:sticky;top:0;z-index:50;background:rgba(0,0,46,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:14px}
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
-    .brand img{height:44px;width:44px;border-radius:999px;object-fit:cover;border:1px solid rgba(255,255,255,.25)}
-    .brand strong{display:block;font-size:14px;letter-spacing:.2px}
-    .brand span{display:block;font-size:12px;color:var(--muted)}
-    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
-    nav a{font-weight:800;text-decoration:none;color:var(--text)}
+
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(0,0,46,.88);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      text-decoration:none; color:inherit;
+    }
+    .brand img{
+      height:44px;width:44px;border-radius:999px;object-fit:cover;
+      border:1px solid rgba(255,255,255,.25)
+    }
+    .brand strong{display:block; font-size:14px; letter-spacing:.2px}
+    .brand span{display:block; font-size:12px; color:var(--muted)}
+
+    nav ul{list-style:none; margin:0; padding:0; display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{font-weight:800; text-decoration:none; color:var(--text)}
     nav a:hover{text-decoration:underline}
-    .hero{padding:38px 0 10px}
-    .heroGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
-    .kicker{color:var(--muted);font-weight:800;letter-spacing:.2px}
-    h1{margin:10px 0 12px;font-size:40px;line-height:1.08}
-    .lead{color:var(--muted);font-size:18px;margin:0 0 18px}
-    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:12px;border:1px solid var(--border);text-decoration:none;font-weight:900}
-    .btn.primary{background:var(--brand);color:#00002E;border-color:var(--brand)}
+
+    .hero{padding:38px 0 10px;}
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:20px;
+      align-items:start;
+    }
+    .kicker{color:var(--muted); font-weight:800; letter-spacing:.2px}
+    h1{margin:10px 0 12px; font-size:40px; line-height:1.08}
+    .lead{color:var(--muted); font-size:18px; margin:0 0 18px}
+
+    .ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px; border-radius:12px; border:1px solid var(--border);
+      text-decoration:none; font-weight:900;
+    }
+    .btn.primary{background:var(--brand); color:#00002E; border-color:var(--brand)}
     .btn.primary:hover{filter:brightness(.95)}
-    .btn.ghost{background:transparent;color:var(--text);border-color:var(--border)}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
-    .mini{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
-    .mini .pill{background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:14px;padding:12px;font-size:13px;color:var(--muted)}
+    .btn.ghost{background:transparent; color:var(--text); border-color:var(--border)}
+
+    .card{
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+
+    .mini{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:10px;
+      margin-top:14px;
+    }
+    .mini .pill{
+      background: rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:12px;
+      font-size:13px;
+      color:var(--muted);
+    }
     .mini .pill a{color:var(--text)}
+
     section{padding:24px 0}
-    section h2{font-size:26px;margin:0 0 12px}
-    section h3{margin:0 0 8px;font-size:18px}
-    .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-    .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-    .listClean{margin:0;padding-left:18px;color:var(--muted)}
+    section h2{font-size:26px; margin:0 0 12px}
+    section h3{margin:0 0 8px; font-size:18px}
+    .grid2{display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:16px}
+    .grid3{display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:16px}
+    .listClean{margin:0; padding-left:18px; color:var(--muted)}
     .muted{color:var(--muted)}
-    .divider{border-top:1px solid var(--border);margin:18px 0}
-    details{background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:14px;padding:12px 14px}
+    .divider{border-top:1px solid var(--border); margin:18px 0}
+
+    details{
+      background: rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:12px 14px;
+    }
     details + details{margin-top:10px}
-    summary{cursor:pointer;font-weight:900;color:var(--brand)}
+    summary{cursor:pointer; font-weight:900; color:var(--brand)}
     summary::-webkit-details-marker{display:none}
-    footer{border-top:1px solid var(--border);padding:22px 0 34px;color:var(--muted);font-size:14px}
-    @media (max-width:920px){.heroGrid{grid-template-columns:1fr}h1{font-size:34px}.grid3,.grid2,.mini{grid-template-columns:1fr}}
+
+    footer{
+      border-top:1px solid var(--border);
+      padding:22px 0 34px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media (max-width: 920px){
+      .heroGrid{grid-template-columns: 1fr}
+      h1{font-size:34px}
+      .grid3,.grid2,.mini{grid-template-columns:1fr}
+    }
   </style>
 
   <script type="application/ld+json">
@@ -113,7 +195,6 @@
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#location">Location</a></li>
             <li><a href="/blog.html">Blog</a></li>
-            <li><a href="/calendar.html">Schedule</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#doctor">The Doctor</a></li>
           </ul>
@@ -123,32 +204,35 @@
   </header>
 
   <main id="content">
+    <!-- HERO -->
     <section class="hero">
       <div class="container">
         <div class="heroGrid">
           <div class="card">
-            <img src="/assets/hero.jpg"
+            <img
+              src="/assets/hero.jpg"
               alt="Neurosurgical procedure in an operating room"
-              loading="eager" width="1280" height="853"
-              style="width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.12)" />
+              loading="eager"
+              width="1280"
+              height="853"
+              style="width:100%; height:auto; border-radius:14px; border:1px solid rgba(255,255,255,.12)"
+            />
           </div>
 
           <div>
             <div class="kicker">Patient guide</div>
             <h1>Your Neurosurgical Care in Tijuana</h1>
-
-            <!-- Seobility fix: repeat H1 words in body -->
             <p class="lead">
-              This page explains <strong>your neurosurgical care in Tijuana</strong> with clarity — evaluation, preparation, treatment options, and follow-up care.
+              Clear evaluation, preparation, treatment, and follow-up — so you can make informed decisions with confidence.
             </p>
 
             <div class="ctaRow">
-              <a class="btn primary" href="/calendar.html">Schedule online</a>
+              <a class="btn primary" href="#contact">Schedule a consultation</a>
               <a class="btn ghost" href="#process">View the process</a>
             </div>
 
             <div class="mini" aria-label="Quick info">
-              <div class="pill"><strong>Call:</strong> <a href="tel:+16646351809">+1 664-635-1809</a></div>
+              <div class="pill"><strong>Phone:</strong> <a href="tel:+16646351809">+1 664-635-1809</a></div>
               <div class="pill"><strong>Email:</strong> <a href="mailto:info@neurocirujanosentijuana.com">info@neurocirujanosentijuana.com</a></div>
             </div>
 
@@ -161,35 +245,309 @@
       </div>
     </section>
 
-    <!-- Mantén el resto de tus secciones EN como ya las tienes (process/benefits/doctor/first-visit/faq/location/blog/contact). -->
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="container">
+        <h2>Process</h2>
+        <p class="muted">A clear path: evaluation → preparation → treatment → recovery.</p>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>1) Evaluation</h3>
+            <ul class="listClean">
+              <li>Medical history review and neurological examination.</li>
+              <li>Clear explanation of findings and next steps.</li>
+              <li>Imaging/labs as needed to confirm the diagnosis.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>2) Preparation</h3>
+            <ul class="listClean">
+              <li>Clear pre-treatment or pre-surgery instructions.</li>
+              <li>Time to answer questions and set realistic expectations.</li>
+              <li>Coordination with the hospital and care team.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>3) Treatment</h3>
+            <ul class="listClean">
+              <li>Medical or surgical care based on your condition.</li>
+              <li>Safety-focused, evidence-based decisions.</li>
+              <li>Modern pain-control and perioperative protocols.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>4) Recovery</h3>
+            <ul class="listClean">
+              <li>Follow-up care and clear warning signs to watch for.</li>
+              <li>Guidance for activity, medications, and rehabilitation.</li>
+              <li>A recovery plan tailored to your case.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ctaRow" style="margin-top:18px">
+          <a class="btn primary" href="#contact">Schedule now</a>
+          <a class="btn ghost" href="#faq">Read common questions</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section id="benefits">
+      <div class="container">
+        <h2>Benefits</h2>
+        <p class="muted">Personalized care, clear communication, and hospital support in Tijuana.</p>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>Personalized care</h3>
+            <p class="muted">We take time to listen, evaluate, and explain your diagnosis and options in clear terms.</p>
+          </div>
+
+          <div class="card">
+            <h3>Safety and hospital support</h3>
+            <p class="muted">Care is delivered in recognized hospitals with appropriate safety protocols and perioperative support.</p>
+          </div>
+
+          <div class="card">
+            <h3>Continuity and follow-up</h3>
+            <p class="muted">Before and after treatment, you know what to expect and how to take care of yourself.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE DOCTOR -->
+    <section id="doctor">
+      <div class="container">
+        <h2>Meet Dr. José Manuel Segovia</h2>
+
+        <div class="grid2">
+          <div class="card">
+            <img
+              src="/assets/dr-logo.jpg"
+              alt="Dr. José Manuel Segovia, neurosurgeon"
+              style="width:100%;max-width:380px;border-radius:14px;object-fit:cover;border:1px solid rgba(255,255,255,.12)"
+              loading="lazy"
+              width="600"
+              height="600"
+            />
+          </div>
+
+          <div class="card">
+            <h3>Calm, clarity, and careful technique</h3>
+            <p class="muted">
+              During consultations, my priority is for you to feel comfortable and informed. I listen carefully to your symptoms,
+              take a complete medical history, and perform a thorough neurological examination. Then I explain the diagnosis clearly
+              and what studies are needed (if any) to confirm it. With results in hand, we choose the most appropriate treatment plan.
+            </p>
+
+            <div class="ctaRow">
+              <a class="btn primary" href="/curriculum.html">View credentials</a>
+              <a class="btn ghost" href="#contact">Schedule a consultation</a>
+            </div>
+
+            <p class="muted" style="margin-bottom:0">
+              For training, hospital appointments, and areas of care, visit the credentials page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE YOUR FIRST VISIT -->
+    <section id="first-visit">
+      <div class="container">
+        <h2>Before your first visit</h2>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>How consultations work</h3>
+            <p class="muted">
+              The goal is clarity. We review symptoms, perform an exam, and explain what findings mean.
+              If additional testing is needed, we explain why and what decisions it supports.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>What to bring</h3>
+            <ul class="listClean">
+              <li>Prior imaging studies and reports (MRI/CT/X-ray).</li>
+              <li>List of current medications and dosages.</li>
+              <li>Relevant medical history and prior surgeries.</li>
+              <li>Your main questions (we can write them down together).</li>
+            </ul>
+            <p class="muted" style="margin-bottom:0">
+              If you are traveling from the U.S. or another city, we can help you plan recommended timelines and follow-up.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <h2>Frequently asked questions</h2>
+
+        <details>
+          <summary>How do I schedule a consultation?</summary>
+          <div class="muted" style="margin-top:8px">
+            Call <a href="tel:+16646351809">+1 664-635-1809</a> or email
+            <a href="mailto:info@neurocirujanosentijuana.com">info@neurocirujanosentijuana.com</a>.
+          </div>
+        </details>
+
+        <details>
+          <summary>Where are procedures performed?</summary>
+          <div class="muted" style="margin-top:8px">
+            Procedures are performed in certified hospitals in Tijuana, such as Hospital Ángeles. Alternatives may be considered depending on the case.
+          </div>
+        </details>
+
+        <details>
+          <summary>Do you see patients traveling from the U.S.?</summary>
+          <div class="muted" style="margin-top:8px">
+            Yes. We can help you plan recommended timelines in Tijuana and discuss follow-up options.
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I book online?</summary>
+          <div class="muted" style="margin-top:8px">
+            Yes. You can book through Doctoralia:
+            <a href="https://www.doctoralia.com.mx/jose-manuel-segovia-y-galindo/neurocirujano/tijuana" target="_blank" rel="noopener">View profile</a>.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location">
+      <div class="container">
+        <h2>Location</h2>
+        <p class="muted">
+          Ave. Paseo de los Héroes 10999, Suite 205, Medical Offices Tower – Hospital Ángeles Tijuana, Baja California, Mexico.
+        </p>
+
+        <div class="grid2">
+          <div class="card">
+            <img
+              src="/assets/hospital-1.jpg"
+              alt="Hospital Ángeles Tijuana - Main building"
+              loading="lazy"
+              width="1280"
+              height="853"
+              style="width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.12)"
+            />
+          </div>
+
+          <div class="card">
+            <img
+              src="/assets/Hospital-2.jpg"
+              alt="Hospital Ángeles Health International Tijuana - Entrance"
+              loading="lazy"
+              width="1280"
+              height="853"
+              style="width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.12)"
+            />
+          </div>
+        </div>
+
+        <div class="ctaRow" style="margin-top:16px">
+          <a class="btn primary" href="https://maps.app.goo.gl/cki792dTpFDTks799" target="_blank" rel="noopener">
+            Open in Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG TEASERS -->
+    <section id="blog">
+      <div class="container">
+        <h2>Articles to answer common questions</h2>
+        <p class="muted">
+          Clear, reliable information for patients and families. These articles do not replace a medical consultation,
+          but they can help you understand symptoms and options.
+        </p>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>When should you see a neurosurgeon?</h3>
+            <p class="muted">Warning signs and situations where a specialist evaluation may be helpful.</p>
+            <a href="/blog/when-to-see-a-neurosurgeon.html">Read article →</a>
+          </div>
+
+          <div class="card">
+            <h3>Herniated disc: symptoms & myths</h3>
+            <p class="muted">What the diagnosis means and when surgery is considered.</p>
+            <a href="/blog/herniated-disc-symptoms.html">Read article →</a>
+          </div>
+
+          <div class="card">
+            <h3>Back pain: when is it neurological?</h3>
+            <p class="muted">How to recognize neurological warning signs with back or neck pain.</p>
+            <a href="/blog/back-pain-neurological.html">Read article →</a>
+          </div>
+        </div>
+
+        <div class="ctaRow" style="margin-top:16px">
+          <a class="btn ghost" href="/blog.html">View all articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Schedule your consultation</h3>
+            <p class="muted">Choose the contact method that works best for you.</p>
+            <p style="margin:0">
+              <strong>Phone:</strong> <a href="tel:+16646351809">+1 664-635-1809</a><br />
+              <strong>Email:</strong> <a href="mailto:info@neurocirujanosentijuana.com">info@neurocirujanosentijuana.com</a>
+            </p>
+            <div class="ctaRow">
+              <a class="btn primary" href="tel:+16646351809">Call</a>
+              <a class="btn ghost" href="mailto:info@neurocirujanosentijuana.com">Email</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Legal</h3>
+            <p class="muted">Required policies for trust and compliance.</p>
+            <ul class="listClean">
+              <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="/terms-of-service.html">Terms of Service</a></li>
+            </ul>
+            <p class="muted" style="margin-bottom:0">
+              Spanish version: <a href="https://neurocirujanosentijuana.com/">neurocirujanosentijuana.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
     <div class="container">
       <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:space-between; align-items:center;">
-        <div>© <span id="y"></span> Dr. José Manuel Segovia. All rights reserved.</div>
+        <div>© <span id="y"></span> Dr. José Manuel Segovia. Spine & Brain Care. All rights reserved.</div>
         <div class="muted">Tijuana, Baja California</div>
       </div>
     </div>
   </footer>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-
-  <!-- ✅ Jotform Agent FIX: defer + fallback -->
-  <div id="jf-agent-fallback" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:none">
-    <a href="#contact" class="btn primary" style="box-shadow:0 12px 32px rgba(0,0,0,.35)">Need help?</a>
-  </div>
-
-  <script defer src="https://cdn.jotfor.ms/agent/embedjs/019a3268dbe17b5c832b8ce9b508f1d589ea/embed.js"></script>
   <script>
-    window.addEventListener("load", function(){
-      setTimeout(function(){
-        var injected = document.querySelector('[data-jf-agent], .jf-agent, iframe[src*="jotfor"], script[src*="jotfor"]');
-        if(!injected){
-          document.getElementById("jf-agent-fallback").style.display = "block";
-        }
-      }, 2500);
-    });
+    document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
