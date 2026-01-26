@@ -576,16 +576,10 @@
 
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 
-<!-- Jotform Chatbot (Agent) -->
-<script
-  src="https://cdn.jotfor.ms/agent/embedjs/019a3268dbe17b5c832b8ce9b508f1d589ea/embed.js"
-  defer
-></script>
+<!-- Jotform Agent (EN) -->
+<script src="https://cdn.jotfor.ms/agent/embedjs/019bfc23ede37e9393b86ef52becf5a61c0b/embed.js" defer></script>
 
-<!-- Jotform Chatbot (Agent) -->
-<script src='https://cdn.jotfor.ms/agent/embedjs/019bfc23ede37e9393b86ef52becf5a61c0b/embed.js'>
-</script>
-<!-- Fallback -->
+<!-- Fallback visible if the agent fails to render -->
 <div id="jf-chat-fallback" style="position:fixed;right:16px;bottom:16px;z-index:99999;display:none">
   <a href="#contact" class="btn primary" style="box-shadow:0 12px 32px rgba(0,0,0,.35)">
     Need help?
@@ -595,22 +589,16 @@
 <script>
   window.addEventListener("load", function () {
     setTimeout(function () {
-      // Detect common Jotform injected UI
       const hasWidget =
-        document.getElementById("JotformAgent-019a3268dbe17b5c832b8ce9b508f1d589ea") ||
         document.querySelector('iframe[src*="jotfor"]') ||
         document.querySelector("[data-jf-agent]") ||
         document.querySelector(".jf-agent") ||
         document.querySelector(".jotform-agent");
 
-      if (!hasWidget) {
-        document.getElementById("jf-chat-fallback").style.display = "block";
-      }
-    }, 8000);
+      if (!hasWidget) document.getElementById("jf-chat-fallback").style.display = "block";
+    }, 6000);
   });
 </script>
-
-
 </body>
 </html>
 
