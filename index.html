@@ -576,35 +576,35 @@
 
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 
-<!-- Jotform Chatbot (English site) -->
-<script
-  src="https://cdn.jotfor.ms/agent/embedjs/019bf881e146773b90c1cf0604597e81b3e7/embed.js"
-  defer
-></script>
+<!-- Jotform Chatbot (English) - hardened loader -->
+<script>
+  (function () {
+    var s = document.createElement("script");
+    s.src = "https://cdn.jotfor.ms/agent/embedjs/019bf881e146773b90c1cf0604597e81b3e7/embed.js";
+    s.defer = true;
+    s.onload = function () {
+      // If it loads but the widget fails internally, fallback will still appear.
+      setTimeout(function () {
+        var hasWidget =
+          document.querySelector('iframe[src*="jotfor"]') ||
+          document.querySelector("[data-jf-agent]") ||
+          document.querySelector(".jf-agent") ||
+          document.querySelector(".jotform-agent");
+        if (!hasWidget) document.getElementById("jf-chat-fallback").style.display = "block";
+      }, 3500);
+    };
+    s.onerror = function () {
+      document.getElementById("jf-chat-fallback").style.display = "block";
+    };
+    document.body.appendChild(s);
+  })();
+</script>
 
-<!-- Fallback: if the chatbot does not render, show a help button -->
 <div id="jf-chat-fallback" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:none">
   <a href="#contact" class="btn primary" style="box-shadow:0 12px 32px rgba(0,0,0,.35)">
     Need help?
   </a>
 </div>
-
-<script>
-  window.addEventListener("load", function () {
-    setTimeout(function () {
-      const hasWidget =
-        document.querySelector('iframe[src*="jotfor"]') ||
-        document.querySelector("[data-jf-agent]") ||
-        document.querySelector(".jf-agent") ||
-        document.querySelector(".jotform-agent");
-
-      if (!hasWidget) {
-        document.getElementById("jf-chat-fallback").style.display = "block";
-      }
-    }, 4000);
-  });
-</script>
-
 
 </body>
 </html>
