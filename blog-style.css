@@ -90,9 +90,3 @@ hr{border:none;border-top:1px solid var(--border); margin:18px 0}
   h1{font-size:32px}
 }
 
-/* Force Jotform agent to sit above sticky header */
-#JotformAgent-019bf881e146773b90c1cf0604597e81b3e7{
-  position: fixed !important;
-  z-index: 99999 !important;
-}
-
