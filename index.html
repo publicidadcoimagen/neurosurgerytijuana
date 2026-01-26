@@ -424,8 +424,7 @@
             Yes. We can help you plan recommended timelines in Tijuana and discuss follow-up options.
           </div>
         </details>
-      </div>
-
+  
           <summary>Can I book online?</summary>
           <div class="muted" style="margin-top:8px">
             Yes. You can book through Doctoralia:
@@ -573,7 +572,23 @@
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 
-   <!-- Jotform Assistant -->
-  <script src="https://cdn.jotfor.ms/agent/embedjs/019a3268dbe17b5c832b8ce9b508f1d589ea/embed.js"></script>
+  <!-- ✅ Jotform Agent FIX: defer + fallback -->
+  <div id="jf-agent-fallback" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:none">
+    <a href="#contacto" class="btn primary" style="box-shadow:0 12px 32px rgba(0,0,0,.35)">¿Necesitas ayuda?</a>
+  </div>
+
+  <script defer src="https://cdn.jotfor.ms/agent/embedjs/019a3268dbe17b5c832b8ce9b508f1d589ea/embed.js"></script>
+  <script>
+    // Si el agente no se inicializa por configuración de Jotform, mostramos un botón de ayuda.
+    window.addEventListener("load", function(){
+      setTimeout(function(){
+        // Jotform Agent suele inyectar elementos al DOM. Si no detectamos nada, mostramos fallback.
+        var injected = document.querySelector('[data-jf-agent], .jf-agent, iframe[src*="jotfor"], script[src*="jotfor"]');
+        if(!injected){
+          document.getElementById("jf-agent-fallback").style.display = "block";
+        }
+      }, 2500);
+    });
+  </script>
 </body>
 </html>
