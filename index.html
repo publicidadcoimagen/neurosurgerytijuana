@@ -143,21 +143,37 @@
       padding:12px 14px;
     }
     details + details{margin-top:10px}
-    summary{cursor:pointer; font-weight:900; color:var(--brand)}
+
+    /* ✅ FIX FAQ overflow + arrow */
+    summary{
+      cursor:pointer;
+      font-weight:900;
+      color:var(--brand);
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      line-height:1.4;
+    }
+    summary::before{
+      content:"▶";
+      flex-shrink:0;
+      margin-top:2px;
+      color:var(--brand);
+    }
+    details[open] summary::before{content:"▼";}
     summary::-webkit-details-marker{display:none}
 
-     .socialRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .socialRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
     .iconBtn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border:1px solid var(--border);border-radius:12px;padding:10px 12px;color:var(--text)}
     .iconBtn svg{width:18px;height:18px;fill:var(--text)}
     .iconBtn:hover{border-color:rgba(255,255,255,.25)}
-        
+
     footer{
       border-top:1px solid var(--border);
       padding:22px 0 34px;
       color:var(--muted);
       font-size:14px;
     }
-
     @media (max-width: 920px){
       .heroGrid{grid-template-columns: 1fr}
       h1{font-size:34px}
@@ -210,7 +226,6 @@
   </header>
 
   <main id="content">
-    <!-- HERO -->
     <section class="hero">
       <div class="container">
         <div class="heroGrid">
@@ -228,11 +243,10 @@
           <div>
             <div class="kicker">Patient guide</div>
             <h1>Your Neurosurgical Care in Tijuana</h1>
-           
-            
-            
+
+            <!-- ✅ SEO Search fix: use H1 words in text -->
             <p class="lead">
-              Clear evaluation, preparation, treatment, and follow-up — so you can make informed decisions with confidence.
+              This page explains <strong>your neurosurgical care in Tijuana</strong> — evaluation, preparation, treatment options, and follow-up — so you can make informed decisions with confidence.
             </p>
 
             <div class="ctaRow">
@@ -241,7 +255,7 @@
             </div>
 
             <div class="mini" aria-label="Quick info">
-              <div class="pill"><strong>Phone:</strong> <a href="tel:+16646351809">+1 664-635-1809</a></div>
+              <div class="pill"><strong>Call:</strong> <a href="tel:+16646351809">+1 664-635-1809</a></div>
               <div class="pill"><strong>Email:</strong> <a href="mailto:info@neurocirujanosentijuana.com">info@neurocirujanosentijuana.com</a></div>
             </div>
 
@@ -425,7 +439,8 @@
           </div>
         </details>
 
-    <details>
+        <!-- ✅ FIX: this one was missing opening <details> -->
+        <details>
           <summary>Can I book online?</summary>
           <div class="muted" style="margin-top:8px">
             Yes. You can book through Doctoralia:
@@ -445,25 +460,15 @@
 
         <div class="grid2">
           <div class="card">
-            <img
-              src="/assets/hospital-1.jpg"
-              alt="Hospital Ángeles Tijuana - Main building"
-              loading="lazy"
-              width="1280"
-              height="853"
-              style="width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.12)"
-            />
+            <img src="/assets/hospital-1.jpg" alt="Hospital Ángeles Tijuana - Main building"
+              loading="lazy" width="1280" height="853"
+              style="width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.12)" />
           </div>
 
           <div class="card">
-            <img
-              src="/assets/Hospital-2.jpg"
-              alt="Hospital Ángeles Health International Tijuana - Entrance"
-              loading="lazy"
-              width="1280"
-              height="853"
-              style="width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.12)"
-            />
+            <img src="/assets/Hospital-2.jpg" alt="Hospital Ángeles Health International Tijuana - Entrance"
+              loading="lazy" width="1280" height="853"
+              style="width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.12)" />
           </div>
         </div>
 
@@ -519,14 +524,15 @@
           <div class="card">
             <h3>Schedule your consultation</h3>
             <p class="muted">Choose the contact method that works best for you.</p>
-        
+
             <p style="margin:0">
-              <strong>Phone:</strong> <a href="tel:+16646351809">+1 664-635-1809</a><br />
+              <strong>Call:</strong> <a href="tel:+16646351809">+1 664-635-1809</a><br />
               <strong>Email:</strong> <a href="mailto:info@neurocirujanosentijuana.com">info@neurocirujanosentijuana.com</a>
             </p>
-        
+
             <div class="ctaRow">
-              <a class="btn primary" href=/calendar.html">Book now</a>
+              <!-- ✅ FIX: broken quotes -->
+              <a class="btn primary" href="/calendar.html">Book now</a>
               <a class="btn ghost" href="tel:+16646351809">Call</a>
             </div>
 
@@ -542,7 +548,7 @@
               </a>
             </div>
           </div>
-          
+
           <div class="card">
             <h3>Legal</h3>
             <p class="muted">Required policies for trust and compliance.</p>
@@ -569,27 +575,28 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 
-  <!-- ✅ Jotform Agent FIX: defer + fallback -->
+  <!-- ✅ Jotform Agent: load correctly + reliable fallback -->
   <div id="jf-agent-fallback" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:none">
-    <a href="#contact" class="btn primary" style="box-shadow:0 12px 32px rgba(0,0,0,.35)">¿Need Help?</a>
+    <a href="#contact" class="btn primary" style="box-shadow:0 12px 32px rgba(0,0,0,.35)">Need help?</a>
   </div>
 
   <script defer src="https://cdn.jotfor.ms/agent/embedjs/019a3268dbe17b5c832b8ce9b508f1d589ea/embed.js"></script>
   <script>
-    // Si el agente no se inicializa por configuración de Jotform, mostramos un botón de ayuda.
+    // If the agent doesn't render (domain restrictions / blocked scripts),
+    // we show a visible help button so the page never feels "broken".
     window.addEventListener("load", function(){
       setTimeout(function(){
-        // Jotform Agent suele inyectar elementos al DOM. Si no detectamos nada, mostramos fallback.
-        var injected = document.querySelector('[data-jf-agent], .jf-agent, iframe[src*="jotfor"], script[src*="jotfor"]');
-        if(!injected){
+        // We detect common injected elements. If nothing appears, show fallback.
+        var agentUI = document.querySelector('.jotform-agent, .jf-agent, [data-jf-agent], iframe[src*="jotfor.ms/agent"], iframe[src*="jotfor"]');
+        if(!agentUI){
           document.getElementById("jf-agent-fallback").style.display = "block";
         }
-      }, 2500);
+      }, 3000);
     });
   </script>
 </body>
 </html>
+
+
