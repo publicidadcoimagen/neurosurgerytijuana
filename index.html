@@ -146,6 +146,11 @@
     summary{cursor:pointer; font-weight:900; color:var(--brand)}
     summary::-webkit-details-marker{display:none}
 
+     .socialRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .iconBtn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border:1px solid var(--border);border-radius:12px;padding:10px 12px;color:var(--text)}
+    .iconBtn svg{width:18px;height:18px;fill:var(--text)}
+    .iconBtn:hover{border-color:rgba(255,255,255,.25)}
+        
     footer{
       border-top:1px solid var(--border);
       padding:22px 0 34px;
@@ -195,6 +200,7 @@
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#location">Location</a></li>
             <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/calendar.html">Booking</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#doctor">The Doctor</a></li>
           </ul>
@@ -222,12 +228,15 @@
           <div>
             <div class="kicker">Patient guide</div>
             <h1>Your Neurosurgical Care in Tijuana</h1>
+           
+            
+            
             <p class="lead">
               Clear evaluation, preparation, treatment, and follow-up — so you can make informed decisions with confidence.
             </p>
 
             <div class="ctaRow">
-              <a class="btn primary" href="#contact">Schedule a consultation</a>
+              <a class="btn primary" href="/calendar.html">Schedule a consultation</a>
               <a class="btn ghost" href="#process">View the process</a>
             </div>
 
