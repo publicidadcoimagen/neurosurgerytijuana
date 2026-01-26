@@ -582,18 +582,22 @@
   defer
 ></script>
 
-<!-- Fallback: si el chatbot no renderiza, mostramos un botón de ayuda -->
-<div id="jf-chat-fallback" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:none">
+<!-- Jotform Chatbot (Agent) -->
+<script src="https://cdn.jotfor.ms/agent/embedjs/019a3268dbe17b5c832b8ce9b508f1d589ea/embed.js" defer></script>
+
+<!-- Fallback -->
+<div id="jf-chat-fallback" style="position:fixed;right:16px;bottom:16px;z-index:99999;display:none">
   <a href="#contact" class="btn primary" style="box-shadow:0 12px 32px rgba(0,0,0,.35)">
-    Necesitas ayuda
+    Need help?
   </a>
 </div>
 
 <script>
-  // Si el widget no aparece en ~4s, mostramos fallback (por bloqueo, dominios, adblock, etc.)
   window.addEventListener("load", function () {
     setTimeout(function () {
+      // Detect common Jotform injected UI
       const hasWidget =
+        document.getElementById("JotformAgent-019a3268dbe17b5c832b8ce9b508f1d589ea") ||
         document.querySelector('iframe[src*="jotfor"]') ||
         document.querySelector("[data-jf-agent]") ||
         document.querySelector(".jf-agent") ||
@@ -602,9 +606,10 @@
       if (!hasWidget) {
         document.getElementById("jf-chat-fallback").style.display = "block";
       }
-    }, 4000);
+    }, 8000);
   });
 </script>
+
 
 </body>
 </html>
