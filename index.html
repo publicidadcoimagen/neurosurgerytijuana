@@ -590,20 +590,56 @@
     width:56px;
     height:56px;
     border-radius:999px;
-    border:1px solid rgba(255,255,255,.18);
-    background:#F2B42D;
-    color:#00002E;
+    border:2px solid rgba(255,255,255,.22);
+    background:#00002E;
     cursor:pointer;
     box-shadow:0 12px 32px rgba(0,0,0,.35);
+    padding:0;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:22px;
-    font-weight:900;
+    overflow:hidden;
   "
 >
-  💬
+  <img
+    src="/assets/assistant.png"
+    alt="Assistant"
+    style="
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:999px;
+      display:block;
+    "
+    loading="lazy"
+  />
 </button>
+
+<!-- Message bubble -->
+<div
+  id="jf-tip"
+  style="
+    position:fixed;
+    right:84px;
+    bottom:26px;
+    z-index:99999;
+    display:block;
+    background:#ffffff;
+    color:#8A8A8A;
+    font-size:13px;
+    line-height:1.2;
+    padding:10px 12px;
+    border-radius:12px;
+    border:1px solid rgba(0,0,0,.08);
+    box-shadow:0 10px 24px rgba(0,0,0,.18);
+    max-width:220px;
+    user-select:none;
+    pointer-events:none;
+    white-space:nowrap;
+  "
+>
+  Hi, can I help you?
+</div>
 
 <!-- 2) Modal (hidden by default) -->
 <div
@@ -645,8 +681,8 @@
 <script>
   (function(){
     const bubble = document.getElementById("jf-bubble");
+    const tip    = document.getElementById("jf-tip");
     const modal  = document.getElementById("jf-modal");
-    const panel  = document.getElementById("jf-panel");
     const closeBtn = document.getElementById("jf-close");
 
     let isOpen = false;
@@ -655,14 +691,18 @@
     function openChat(){
       if (isOpen) return;
       modal.style.display = "block";
+      // When chat opens, hide tip
+      if (tip) tip.style.display = "none";
       isOpen = true;
     }
     function closeChat(){
       modal.style.display = "none";
       isOpen = false;
+      // Show tip again after closing (optional)
+      if (tip) tip.style.display = "block";
     }
 
-    // Desktop: open on hover (with a tiny delay to avoid accidental opens)
+    // Desktop hover: open with small delay
     bubble.addEventListener("mouseenter", () => {
       hoverTimer = setTimeout(openChat, 200);
     });
@@ -670,16 +710,16 @@
       if (hoverTimer) clearTimeout(hoverTimer);
     });
 
-    // Mobile/All: open on click
+    // Click to open (mobile + desktop)
     bubble.addEventListener("click", (e) => {
       e.preventDefault();
       openChat();
     });
 
-    // Close actions
+    // Close button
     closeBtn.addEventListener("click", closeChat);
 
-    // Click outside panel closes
+    // Click outside closes
     modal.addEventListener("click", (e) => {
       if (e.target === modal) closeChat();
     });
@@ -689,8 +729,8 @@
       if (e.key === "Escape" && isOpen) closeChat();
     });
 
-    // (Optional) If you want it to auto-open after X seconds, uncomment:
-    // setTimeout(openChat, 5000);
+    // Optional: hide tip after a few seconds automatically
+    setTimeout(() => { if (!isOpen && tip) tip.style.display = "none"; }, 9000);
   })();
 </script>
 
