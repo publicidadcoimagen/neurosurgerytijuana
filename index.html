@@ -576,33 +576,54 @@
 
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 
-<!-- Jotform Chatbot (Agent) -->
-<script src='https://cdn.jotfor.ms/agent/embedjs/019bf881e146773b90c1cf0604597e81b3e7/embed.js'>
-</script>
-  
-<!-- Fallback: si el chatbot no renderiza, mostramos un botón de ayuda -->
-<div id="jf-chat-fallback" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:none">
+<!-- Jotform Agent (EN) -->
+<script src="https://cdn.jotfor.ms/agent/embedjs/019bf881e146773b90c1cf0604597e81b3e7/embed.js" defer></script>
+
+<!-- Fallback button (only if widget doesn't render) -->
+<div id="jf-chat-fallback" style="position:fixed;right:16px;bottom:16px;z-index:99999;display:none">
   <a href="#contact" class="btn primary" style="box-shadow:0 12px 32px rgba(0,0,0,.35)">
     Need help?
   </a>
 </div>
 
 <script>
-  // Si el widget no aparece en ~4s, mostramos fallback (por bloqueo, dominios, adblock, etc.)
-  window.addEventListener("load", function () {
-    setTimeout(function () {
-      const hasWidget =
+  (function () {
+    const fallback = document.getElementById("jf-chat-fallback");
+
+    function hasJotformWidget() {
+      return !!(
         document.querySelector('iframe[src*="jotfor"]') ||
         document.querySelector("[data-jf-agent]") ||
         document.querySelector(".jf-agent") ||
-        document.querySelector(".jotform-agent");
+        document.querySelector(".jotform-agent") ||
+        document.querySelector('[id^="JotformAgent-"]')
+      );
+    }
 
-      if (!hasWidget) {
-        document.getElementById("jf-chat-fallback").style.display = "block";
-      }
-    }, 4000);
-  });
+    // After load, poll for up to ~20 seconds.
+    window.addEventListener("load", function () {
+      let tries = 0;
+      const maxTries = 40; // 40 * 500ms = 20s
+      const timer = setInterval(function () {
+        tries++;
+
+        if (hasJotformWidget()) {
+          // Widget is present -> hide fallback and stop polling
+          fallback.style.display = "none";
+          clearInterval(timer);
+          return;
+        }
+
+        // After ~3s, if still not present, show fallback
+        if (tries === 6) fallback.style.display = "block";
+
+        // Stop polling after max tries (leave fallback visible)
+        if (tries >= maxTries) clearInterval(timer);
+      }, 500);
+    });
+  })();
 </script>
+
 
 </body>
 </html>
