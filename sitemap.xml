@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- MAIN -->
   <url>
     <loc>https://neurosurgerytijuana.com/</loc>
     <priority>1.0</priority>
+  </url>
+
+  <!-- CORE PAGES -->
+  <url>
+    <loc>https://neurosurgerytijuana.com/medical-treatments.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://neurosurgerytijuana.com/symptoms.html</loc>
+    <priority>0.8</priority>
   </url>
 
   <url>
@@ -12,95 +24,89 @@
   </url>
 
   <url>
-    <loc>https://neurosurgerytijuana.com/curriculum.html</loc>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://neurosurgerytijuana.com/calendar.html</loc>
     <priority>0.7</priority>
   </url>
 
   <url>
+    <loc>https://neurosurgerytijuana.com/curriculum.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- BLOG -->
+  <url>
     <loc>https://neurosurgerytijuana.com/blog/when-to-see-a-neurosurgeon.html</loc>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://neurosurgerytijuana.com/blog/herniated-disc-symptoms.html</loc>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://neurosurgerytijuana.com/blog/back-pain-neurological.html</loc>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://neurosurgerytijuana.com/blog/neurosurgical-consultation.html</loc>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://neurosurgerytijuana.com/blog/is-neurosurgery-in-tijuana-safe.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- TREATMENTS -->
+  <url>
+    <loc>https://neurosurgerytijuana.com/medical-treatments/Herniated-disc-tijuana.html</loc>
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://neurosurgerytijuana.com/medical-treatments/spine-surgery-tijuana.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://neurosurgerytijuana.com/medical-treatments/sciatica-treatment-tijuana.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://neurosurgerytijuana.com/medical-treatments/spinal-stenosis-tijuana.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://neurosurgerytijuana.com/medical-treatments/brain-tumor-treatment-tijuana.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- SYMPTOMS -->
+  <url>
+    <loc>https://neurosurgerytijuana.com/symptoms/back-pain-when-to-see-a-neurosurgeon.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://neurosurgerytijuana.com/symptoms/neurological-headache.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://neurosurgerytijuana.com/symptoms/tingling-in-legs-neurological-cause.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- LEGAL -->
   <url>
     <loc>https://neurosurgerytijuana.com/privacy-policy.html</loc>
     <priority>0.3</priority>
   </url>
 
-   <url>
-<loc>https://neurosurgerytijuana.com/medical-treatments.html</loc>
-<priority>0.8</priority>
-</url>
-
-   <url>
-<loc>https://neurosurgerytijuana.com/medical-treatments/Herniated-disc-tijuana.html</loc>
-<priority>0.8</priority>
-</url>
-
-   <url>
-<loc>https://neurosurgerytijuana.com/medical-treatments/spine-surgery-tijuana.html</loc>
-<priority>0.8</priority>
-</url>
-
-    <url>
-<loc>https://neurosurgerytijuana.com/medical-treatments/sciatica-treatment-tijuana.html</loc>
-<priority>0.8</priority>
-</url>
-
-      <url>
-<loc>https://neurosurgerytijuana.com/medical-treatments/spinal-stenosis-tijuana.html</loc>
-<priority>0.8</priority>
-</url>
-
-       <url>
-<loc>https://neurosurgerytijuana.com/medical-treatments/brain-tumor-treatment-tijuana.html</loc>
-<priority>0.8</priority>
-</url>
-
-  <url>
-  <loc>https://neurosurgerytijuana.com/symptoms.html</loc>
-  <priority>0.7</priority>
-</url>
-  
-  <url>
-  <loc>https://neurosurgerytijuana.com/symptoms/back-pain-when-to-see-a-neurosurgeon.html</loc>
-  <priority>0.7</priority>
-</url>
-
-<url>
-  <loc>https://neurosurgerytijuana.com/symptoms/neurological-headache.html</loc>
-  <priority>0.7</priority>
-</url>
-
-<url>
-  <loc>https://neurosurgerytijuana.com/symptoms/tingling-in-legs-neurological-cause.html</loc>
-  <priority>0.7</priority>
-</url>
-  
   <url>
     <loc>https://neurosurgerytijuana.com/terms-of-service.html</loc>
     <priority>0.3</priority>
