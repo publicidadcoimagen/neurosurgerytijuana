@@ -84,6 +84,40 @@
     <loc>https://neurosurgerytijuana.com/medical-treatments/brain-tumor-treatment-tijuana.html</loc>
     <priority>0.7</priority>
   </url>
+  
+ <!-- SERVICES -->
+    <url>
+    <loc>https://neurosurgerytijuana.com/services/neurological-consultation-tijuana.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://neurosurgerytijuana.com/services/neurosurgical-consultation-tijuana.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://neurosurgerytijuana.com/services/spine-surgery-tijuana.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://neurosurgerytijuana.com/services/nerve-compression-treatment-tijuana.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://neurosurgerytijuana.com/services/chronic-back-pain-evaluation-tijuana.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://neurosurgerytijuana.com/services/brain-tumor-treatment-tijuana.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://neurosurgerytijuana.com/services/microsurgery-spine-tijuana.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://neurosurgerytijuana.com/services/brain-tumor-microsurgery-tijuana.html</loc>
+    <priority>0.7</priority>
+  </url>
 
   <!-- SYMPTOMS -->
   <url>
