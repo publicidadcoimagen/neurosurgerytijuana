@@ -165,6 +165,8 @@ font-size:14px;
  ]
 }
 </script>
+  <link rel="stylesheet" href="/assets/mobile-menu.css">
+  <script src="/assets/js/mobile-menu.js" defer></script>
 </head>
 <body>
 <header>
@@ -177,7 +179,8 @@ font-size:14px;
 <span>Neurosurgeon in Tijuana</span>
 </div>
 </a>
-<nav>
+<button type="button" data-menu-toggle data-open="Open menu" data-close="Close menu" aria-label="Open menu" aria-expanded="false" aria-controls="site-navigation" hidden><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <nav id="site-navigation">
 <ul>
 <li><a href="/">Home</a></li>
 <li><a href="/services.html">Services</a></li>
