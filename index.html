@@ -259,7 +259,7 @@ WhatsApp
     <div class="container">
       <div class="nav">
         <a class="brand" href="/">
-          <img src="/assets/dr-logo.jpg" alt="Dr. José Manuel Segovia" width="44" height="44" loading="lazy" />
+          <img decoding="async" src="/assets/dr-logo-small.webp" alt="Dr. José Manuel Segovia" width="44" height="44" />
           <div>
             <strong>Dr. José Manuel Segovia</strong>
             <span>Neurosurgeon in Tijuana</span>
@@ -290,12 +290,12 @@ WhatsApp
       <div class="container">
         <div class="heroGrid">
           <div class="card">
-            <img
-              src="/assets/hero.jpg"
+            <img decoding="async" fetchpriority="high" srcset="/assets/hero-640.webp 640w, /assets/hero.webp 1023w" sizes="(max-width:920px) calc(100vw - 78px), 482px"
+              src="/assets/hero.webp"
               alt="Neurosurgical procedure in an operating room"
               loading="eager"
-              width="1280"
-              height="853"
+              width="1023"
+              height="1600"
               style="width:100%; height:auto; border-radius:14px; border:1px solid rgba(255,255,255,.12)"
             />
           </div>
@@ -315,7 +315,7 @@ WhatsApp
             </div>
 
             <div class="mini" aria-label="Quick info">
-              <div class="pill"><strong>Call at:</strong> <a href="tel:+16646351809">+1 664-635-1809</a></div>
+              <div class="pill"><strong>Call at:</strong> <a href="tel:+526646351809">+52 664-635-1809</a></div>
               <div class="pill"><strong>Send email:</strong> <a href="mailto:info@neurocirujanosentijuana.com">info@neurocirujanosentijuana.com</a></div>
             </div>
 
@@ -411,8 +411,8 @@ WhatsApp
 
         <div class="grid2">
           <div class="card">
-            <img
-              src="/assets/dr-logo.jpg"
+            <img decoding="async"
+              src="/assets/dr-logo.webp"
               alt="Dr. José Manuel Segovia, neurosurgeon"
               style="width:100%;max-width:380px;border-radius:14px;object-fit:cover;border:1px solid rgba(255,255,255,.12)"
               loading="lazy"
@@ -494,7 +494,7 @@ WhatsApp
         <details>
           <summary>How do I schedule a consultation?</summary>
           <div class="muted" style="margin-top:8px">
-            Call from U.S. to<a href="tel:+0115216646351809">+1 664-635-1809</a> or send us a email
+            Call from U.S. to<a href="tel:+526646351809">+52 664-635-1809</a> or send us a email
             <a href="mailto:info@neurocirujanosentijuana.com">info@neurocirujanosentijuana.com</a>.
           </div>
         </details>
@@ -534,14 +534,14 @@ WhatsApp
 
         <div class="grid2">
           <div class="card">
-            <img src="/assets/hospital-1.jpg" alt="Hospital Ángeles Tijuana - Main building"
+            <img decoding="async" srcset="/assets/hospital-1-640.webp 640w, /assets/hospital-1.webp 1280w" sizes="(max-width:920px) calc(100vw - 78px), 484px" src="/assets/hospital-1.webp" alt="Hospital Ángeles Tijuana - Main building"
               loading="lazy" width="1280" height="853"
               style="width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.12)" />
           </div>
 
           <div class="card">
-            <img src="/assets/Hospital-2.jpg" alt="Hospital Ángeles Health International Tijuana - Entrance"
-              loading="lazy" width="1280" height="853"
+            <img decoding="async" src="/assets/Hospital-2.webp" alt="Hospital Ángeles Health International Tijuana - Entrance"
+              loading="lazy" width="450" height="267"
               style="width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.12)" />
           </div>
         </div>
@@ -697,7 +697,7 @@ WhatsApp
         <p class="muted">
           Learn about possible neurological or spinal causes of numbness, tingling, or weakness.
         </p>
-        <a href="/symptoms/tingling-legs-neurological-causes.html">
+        <a href="/symptoms/tingling-in-legs-neurological-cause.html">
           Tingling in the legs: possible neurological causes
         </a>
       </div>
@@ -730,14 +730,14 @@ WhatsApp
             <p class="muted">Choose the contact method that works best for you.</p>
 
             <p style="margin:0">
-              <strong>Call:</strong> <a href="tel:+16646351809">+1 664-635-1809</a><br />
+              <strong>Call:</strong> <a href="tel:+526646351809">+52 664-635-1809</a><br />
               <strong>Email:</strong> <a href="mailto:info@neurocirujanosentijuana.com">info@neurocirujanosentijuana.com</a>
             </p>
 
             <div class="ctaRow">
               <!-- ✅ FIX: broken quotes -->
               <a class="btn primary" href="/calendar.html">Book now</a>
-              <a class="btn ghost" href="tel:+16646351809">Call now</a>
+              <a class="btn ghost" href="tel:+526646351809">Call now</a>
             </div>
 
             <div class="socialRow" aria-label="Social Media">
@@ -805,8 +805,8 @@ WhatsApp
     overflow:hidden;
   "
 >
-  <img
-    src="/assets/assistant.png"
+  <img decoding="async"
+    src="/assets/assistant.webp"
     alt="Assistant"
     style="
       width:100%;
@@ -874,7 +874,7 @@ WhatsApp
     </div>
 
     <iframe
-      src="https://www.jotform.com/agent/019bf881e146773b90c1cf0604597e81b3e7?skipWelcome=1&maximizable=1"
+      title="Assistant chat" data-src="https://www.jotform.com/agent/019bf881e146773b90c1cf0604597e81b3e7?skipWelcome=1&maximizable=1"
       style="width:100%;height:calc(100% - 44px);border:0"
       allow="microphone *; display-capture *;"
       loading="lazy"
@@ -894,6 +894,8 @@ WhatsApp
 
     function openChat(){
       if (isOpen) return;
+      const frame = modal.querySelector("iframe");
+      if (frame && !frame.getAttribute("src")) frame.src = frame.dataset.src;
       modal.style.display = "block";
       // When chat opens, hide tip
       if (tip) tip.style.display = "none";
